@@ -27,10 +27,12 @@ const add = (...rest) => {
 };
 
 // Example
-const add = (num1, num2, num3) => {
-  return num1 + num2 + num3;
-};
+// const add = (num1, num2, num3) => {
+//   return num1 + num2 + num3;
+// };
 // console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
 //Test of join words array function
 console.log(joinWords(["test", "test2", " another string"]));
+
+console.log(Math.pow(2, 2));
