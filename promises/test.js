@@ -1,3 +1,4 @@
+const fs = require("fs");
 // const add = (num1, num2 = 0) => {
 //   console.log(num1, num2);
 // };
@@ -33,6 +34,16 @@ const add = (...rest) => {
 // console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
 //Test of join words array function
-console.log(joinWords(["test", "test2", " another string"]));
+// console.log(joinWords(["test", "test2", " another string"]));
 
-console.log(Math.pow(2, 2));
+// console.log(Math.pow(2, 2));
+
+const writeFile = (filePath, content) =>
+  new Promise((resolve, reject) => {
+    fs.writeFile(filePath, content, (err) => {
+      if (err) reject(err);
+      else resolve();
+    });
+  });
+
+writeFile("./testFile2.txt", "test file").then(console.log);

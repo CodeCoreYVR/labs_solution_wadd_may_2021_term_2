@@ -19,7 +19,7 @@ const mult = (...nums) =>
     setTimeout(() => {
       resolve(
         nums.reduce((prev, cur, index) => {
-          if (index == 0) return prev;
+          if (index === 0) return prev;
           else return prev * cur;
         }, nums[0])
       );
