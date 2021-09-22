@@ -16,7 +16,7 @@ let guessed = false;
 let attempts = 0;
 
 // Setting the initial prompt
-rl.setPrompt(" I'm thinking of a number between 1 and 10\n> ");
+rl.setPrompt("I'm thinking of a number between 1 and 10\n> ");
 // Prompting user
 rl.prompt();
 
