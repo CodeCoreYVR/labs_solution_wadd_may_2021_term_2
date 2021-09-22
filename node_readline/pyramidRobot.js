@@ -29,8 +29,26 @@ const askQuestion = () => {
 };
 
 // Function for generating pyramid code
-const generatePyramid = () => {
-  let pyramid = "*";
+const generatePyramid = (rows) => {
+  // out output text
+  let pyramid = "";
+  // string for row
+  var a = "";
+  // number of rows
+  var n = rows;
+  // current row
+  var m = n - 1;
+  for (i = 1; i <= n; i++) {
+    // trims row
+    a = a.trim();
+    // calculates needed space for and adds asterisks
+    a = " ".repeat(m) + a + (i > 1 ? " " : "") + "*";
+    // adds row to our pyramid text
+    // it this is not lost row adds line break at the end as well
+    pyramid += a + (i === n ? "" : "\n");
+    // decrease row number
+    m--;
+  }
   return pyramid;
 };
 
@@ -56,7 +74,7 @@ rl.on("line", (input) => {
     // sets file name
     fileName = input;
     // generates pyramid
-    const pyramid = generatePyramid();
+    const pyramid = generatePyramid(height);
     // writes file
     fs.writeFile(fileName, pyramid).then(() => {
       pyramidFileCreated = true;
