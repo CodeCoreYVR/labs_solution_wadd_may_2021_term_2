@@ -10,9 +10,9 @@ const rl = readline.createInterface({
 let attempts = 0;
 // Word that user will guess
 const word = "node";
-// Word splitted into characters
+// Word splitted into characters ["n","o","d","e"]
 const characters = word.split("");
-// Character wich user already guessed
+// Character wich user already guessed []
 const guessedCharacters = [];
 // Indication if user guessed the word
 let guessed = false;
@@ -65,7 +65,13 @@ rl.on("line", (input) => {
       // Displaying message for the user
       console.log(`There was an ${input}! ${generateWord()}`);
       // Checking if user won or not
-      if (characters.every((char) => guessedCharacters.includes(char))) {
+      if (
+        characters.every(
+          (char) =>
+            guessedCharacters.includes(char.toLowerCase()) ||
+            guessedCharacters.includes(char.toUpperCase())
+        )
+      ) {
         // If user won we will set guessed to true and close app
         guessed = true;
         rl.close();
