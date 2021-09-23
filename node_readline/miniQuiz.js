@@ -6,6 +6,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+
 // Index of current question
 let questionIndex = 0;
 // user score

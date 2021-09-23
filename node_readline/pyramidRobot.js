@@ -13,7 +13,7 @@ const rl = readline.createInterface({
 // indication if file with pyramid was created
 let pyramidFileCreated = false;
 // indication of current action
-let action = "hight";
+let action = "hight"; // hight || fileName
 // file name
 let fileName = "";
 // height of our pyramid
