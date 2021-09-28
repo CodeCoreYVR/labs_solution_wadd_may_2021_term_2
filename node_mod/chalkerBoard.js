@@ -5,6 +5,8 @@ const chalk = require("chalk");
 let color = process.argv[2];
 
 // formatting to correct function name
+// bgBlue
+// bgRed
 const bgColor = "bg" + color[0].toUpperCase() + color.slice(1);
 
 // Getting width from argv

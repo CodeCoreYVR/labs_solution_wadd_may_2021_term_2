@@ -20,7 +20,7 @@ const main = async () => {
 
   // Get all links but not links inside of div with class .cal
   let links = $("a :not(.cal)");
-  // Loops over link
+  // Loops over links list
   links.each((index, element) => {
     //Generates random first name
     let random = faker.name.firstName();
