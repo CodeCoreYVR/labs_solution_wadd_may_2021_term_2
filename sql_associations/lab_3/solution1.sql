@@ -5,5 +5,5 @@ WHERE id IN
     (
         SELECT product_id 
         FROM line_items 
-        WHERE created_at > '2018-04-01'
+        WHERE created_at > '2018-01-01'
     )
