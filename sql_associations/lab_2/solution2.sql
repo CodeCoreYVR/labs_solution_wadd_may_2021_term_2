@@ -1,5 +1,5 @@
 -- Find the average order total price for all the orders in the system
-SELECT AVG(order_price) 
+SELECT AVG(order_price) as average_toatal_price
 FROM (
     SELECT SUM(price) as order_price
         FROM line_items 
