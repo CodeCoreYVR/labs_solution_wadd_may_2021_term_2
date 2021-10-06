@@ -6,6 +6,4 @@ exports.up = function (knex) {
   });
 };
 
-exports.down = function (knex) {
-  return knex.schema.dropTable("countries");
-};
+exports.down = function (knex) {};
